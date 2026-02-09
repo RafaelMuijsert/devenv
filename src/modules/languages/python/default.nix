@@ -293,7 +293,7 @@ in
             "--prefix"
             "LD_LIBRARY_PATH"
             ":"
-            (lib.makeLibraryPath libraries)
+            "${(lib.makeLibraryPath libraries)}"
           ]
           ++ lib.optionals pkgs.stdenv.isDarwin [
             "--prefix"
